@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{BUSINESS_NAME} | HVAC Repair & Installation in {CITY}, {STATE}</title>
+  <meta name="description" content="Trusted HVAC services in {CITY}, {STATE}. AC repair, heating, installation & maintenance. 24/7 emergency service. Call {PHONE}">
+  <meta name="keywords" content="HVAC {CITY}, AC repair {CITY}, heating repair {STATE}, HVAC installation, air conditioning service">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{BUSINESS_NAME} | HVAC Repair & Installation">
+  <meta property="og:description" content="Trusted HVAC services in {CITY}, {STATE}. AC repair, heating, installation & maintenance.">
+  <meta property="og:type" content="website">
+  
+  <!-- Local SEO -->
+  <meta name="geo.region" content="US-{STATE}">
+  <meta name="geo.placename" content="{CITY}">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 200 15% 15%;
+      --card: 0 0% 100%;
+      --card-foreground: 200 15% 15%;
+      --primary: 187 65% 35%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 200 20% 96%;
+      --secondary-foreground: 200 15% 15%;
+      --muted: 200 10% 90%;
+      --muted-foreground: 200 10% 45%;
+      --accent: 38 92% 50%;
+      --accent-foreground: 0 0% 100%;
+      --border: 200 15% 90%;
+      --success: 142 70% 40%;
+      --warning: 38 92% 50%;
+      --heating: 15 85% 55%;
+      --cooling: 200 85% 50%;
+      --radius: 0.75rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: hsl(var(--background));
+      color: hsl(var(--foreground));
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: hsl(var(--card) / 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid hsl(var(--border));
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: hsl(var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: white;
+    }
+
+    .logo-text strong {
+      display: block;
+      color: hsl(var(--foreground));
+      font-size: 1rem;
+    }
+
+    .logo-text span {
+      font-size: 0.75rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .nav {
+      display: none;
+      gap: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .nav { display: flex; }
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: hsl(var(--muted-foreground));
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: hsl(var(--foreground));
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+    }
+
+    .btn-primary:hover {
+      background: hsl(var(--primary) / 0.9);
+      transform: translateY(-1px);
+    }
+
+    .btn-accent {
+      background: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+    }
+
+    .btn-accent:hover {
+      background: hsl(var(--accent) / 0.9);
+      transform: translateY(-1px);
+    }
+
+    .btn-hero {
+      background: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      box-shadow: 0 10px 30px -10px hsl(var(--accent) / 0.5);
+    }
+
+    .btn-hero:hover {
+      background: hsl(var(--accent) / 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px -10px hsl(var(--accent) / 0.6);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: hsl(var(--foreground));
+      border: 2px solid hsl(var(--border));
+    }
+
+    .btn-outline:hover {
+      background: hsl(var(--secondary));
+    }
+
+    .btn-hero-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid hsl(var(--accent));
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+
+    .btn-hero-outline:hover {
+      background: hsl(var(--accent));
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: hsl(var(--muted-foreground));
+      padding: 0.5rem 1rem;
+    }
+
+    .btn-ghost:hover {
+      color: hsl(var(--foreground));
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      padding: 4rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .hero { padding: 6rem 0; }
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.1;
+    }
+
+    .hero-bg::before,
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .hero-bg::before {
+      top: -200px;
+      left: -200px;
+      background: hsl(var(--accent));
+    }
+
+    .hero-bg::after {
+      bottom: -200px;
+      right: -200px;
+      background: hsl(var(--cooling));
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      background: hsl(var(--card) / 0.1);
+      backdrop-filter: blur(8px);
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 3.5rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .hero h1 { font-size: 4rem; }
+    }
+
+    .hero h1 span {
+      display: block;
+      color: hsl(var(--accent));
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-buttons { flex-direction: row; }
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid hsl(var(--card) / 0.2);
+    }
+
+    @media (min-width: 768px) {
+      .trust-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .trust-item {
+      text-align: center;
+    }
+
+    .trust-item .value {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: hsl(var(--accent));
+      margin-bottom: 0.25rem;
+    }
+
+    .trust-item .label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 4rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .section { padding: 6rem 0; }
+    }
+
+    .section-bg {
+      background: hsl(var(--secondary));
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-header h2 { font-size: 2.5rem; }
+    }
+
+    .section-header p {
+      font-size: 1.125rem;
+      color: hsl(var(--muted-foreground));
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Card */
+    .card {
+      background: hsl(var(--card));
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px -5px hsl(var(--foreground) / 0.08);
+      border: 1px solid hsl(var(--border));
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px -5px hsl(var(--foreground) / 0.12);
+    }
+
+    /* Repair vs Replace */
+    .repair-grid {
+      display: grid;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .repair-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .repair-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .repair-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .repair-icon-blue {
+      background: hsl(var(--primary) / 0.1);
+      color: hsl(var(--primary));
+    }
+
+    .repair-icon-orange {
+      background: hsl(var(--accent) / 0.1);
+      color: hsl(var(--accent));
+    }
+
+    .repair-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .repair-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .check-icon {
+      color: hsl(var(--success));
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .x-icon {
+      color: hsl(var(--heating));
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .card:hover .service-icon {
+      transform: scale(1.1);
+    }
+
+    .service-icon-blue {
+      background: hsl(var(--cooling) / 0.1);
+    }
+
+    .service-icon-red {
+      background: hsl(var(--heating) / 0.1);
+    }
+
+    .service-icon-primary {
+      background: hsl(var(--primary) / 0.1);
+    }
+
+    .service-icon-green {
+      background: hsl(var(--success) / 0.1);
+    }
+
+    .service-icon-accent {
+      background: hsl(var(--accent) / 0.1);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: hsl(var(--muted-foreground));
+      margin-bottom: 1rem;
+    }
+
+    .learn-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: hsl(var(--primary));
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.875rem;
+      transition: gap 0.2s;
+    }
+
+    .learn-more:hover {
+      gap: 0.5rem;
+    }
+
+    /* Maintenance Plans */
+    .plans-grid {
+      display: grid;
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .plans-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .plan-card {
+      position: relative;
+      text-align: center;
+    }
+
+    .plan-card.popular {
+      border: 2px solid hsl(var(--accent));
+      box-shadow: 0 0 0 4px hsl(var(--accent) / 0.2);
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: hsl(var(--accent));
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .plan-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 1rem;
+    }
+
+    .plan-icon-primary {
+      background: hsl(var(--primary) / 0.1);
+    }
+
+    .plan-icon-accent {
+      background: hsl(var(--accent) / 0.1);
+    }
+
+    .plan-price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0.5rem 0;
+    }
+
+    .plan-period {
+      color: hsl(var(--muted-foreground));
+    }
+
+    .plan-description {
+      color: hsl(var(--muted-foreground));
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .plan-features {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .plan-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .plan-features .check {
+      color: hsl(var(--success));
+      flex-shrink: 0;
+    }
+
+    .plan-card.popular .plan-features .check {
+      color: hsl(var(--accent));
+    }
+
+    /* Reviews */
+    .reviews-stars {
+      display: flex;
+      justify-content: center;
+      gap: 0.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .star {
+      color: hsl(var(--warning));
+      font-size: 1.5rem;
+    }
+
+    .reviews-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    @media (min-width: 768px) {
+      .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .review-quote {
+      font-size: 2rem;
+      color: hsl(var(--accent) / 0.3);
+      margin-bottom: 1rem;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .review-stars .star {
+      font-size: 1rem;
+    }
+
+    .review-text {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .review-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid hsl(var(--border));
+    }
+
+    .review-author strong {
+      display: block;
+    }
+
+    .review-author span {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .review-service {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+      background: hsl(var(--primary) / 0.1);
+      color: hsl(var(--primary));
+      font-weight: 500;
+    }
+
+    .badges-container {
+      background: hsl(var(--secondary));
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+
+    .badges-container h3 {
+      text-align: center;
+      color: hsl(var(--muted-foreground));
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .badges-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .badges-grid { gap: 4rem; }
+    }
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .badge-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: hsl(var(--primary) / 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: hsl(var(--primary));
+    }
+
+    .badge-item strong {
+      display: block;
+    }
+
+    .badge-item span {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s;
+    }
+
+    .faq-question:hover {
+      color: hsl(var(--primary));
+    }
+
+    .faq-question.active {
+      border-radius: var(--radius) var(--radius) 0 0;
+      border-bottom: none;
+    }
+
+    .faq-chevron {
+      transition: transform 0.2s;
+    }
+
+    .faq-question.active .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 1rem 1.5rem 1.25rem;
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      color: hsl(var(--muted-foreground));
+      line-height: 1.7;
+    }
+
+    .faq-answer.active {
+      display: block;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      padding: 4rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .cta-section { padding: 6rem 0; }
+    }
+
+    .cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      background: hsl(var(--card) / 0.1);
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .cta-section h2 { font-size: 2.5rem; }
+    }
+
+    .cta-section p {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .cta-buttons { flex-direction: row; }
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    @media (min-width: 768px) {
+      .hours-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .hours-grid strong {
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      background: hsl(var(--foreground));
+      color: hsl(var(--background));
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: hsl(var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .footer p {
+      opacity: 0.8;
+      margin-bottom: 1rem;
+      max-width: 400px;
+    }
+
+    .footer-certs {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .footer-cert {
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      background: hsl(var(--background) / 0.1);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .footer h4 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer-list {
+      list-style: none;
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    .footer-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-list a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .footer-list a:hover {
+      opacity: 1;
+    }
+
+    .footer-emergency {
+      color: hsl(var(--accent));
+      font-weight: 500;
+      padding-top: 0.5rem;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid hsl(var(--background) / 0.1);
+      text-align: center;
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+
+    /* Sticky CTA (Mobile) */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: hsl(var(--card));
+      border-top: 1px solid hsl(var(--border));
+      box-shadow: 0 -4px 20px hsl(var(--foreground) / 0.1);
+      padding: 0.75rem;
+    }
+
+    @media (max-width: 767px) {
+      .sticky-cta { display: block; }
+    }
+
+    .sticky-cta-inner {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .sticky-cta .btn {
+      flex: 1;
+    }
+
+    .mobile-spacer {
+      display: none;
+      height: 64px;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-spacer { display: block; }
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "{BUSINESS_NAME}",
+    "description": "Trusted HVAC services in {CITY}, {STATE}. AC repair, heating, installation & maintenance. 24/7 emergency service.",
+    "telephone": "{PHONE}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{CITY}",
+      "addressRegion": "{STATE}",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "{CITY}"},
+      {"@type": "City", "name": "Surrounding Areas"}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "500",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "HVAC Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AC Repair"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heating Repair"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "HVAC Installation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Maintenance Plans"}}
+      ]
+    },
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">❄</div>
+        <div class="logo-text">
+          <strong>{BUSINESS_NAME}</strong>
+          <span>HVAC Experts</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#maintenance">Maintenance Plans</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:{PHONE}" class="btn btn-ghost">📞 {PHONE}</a>
+        <a href="#schedule" class="btn btn-accent">Schedule Service</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        🛡️ Trusted by 10,000+ Homeowners
+      </div>
+      <h1>
+        Your Comfort is Our
+        <span>Top Priority</span>
+      </h1>
+      <p>
+        Expert HVAC repair, installation & maintenance in {CITY}, {STATE}. 24/7 emergency service available.
+      </p>
+      <div class="hero-buttons">
+        <a href="#schedule" class="btn btn-hero">📅 Schedule Service</a>
+        <a href="tel:{PHONE}" class="btn btn-hero-outline">📞 Call {PHONE}</a>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="value">🏆 15+</div>
+          <div class="label">Years Experience</div>
+        </div>
+        <div class="trust-item">
+          <div class="value">⭐ 4.9</div>
+          <div class="label">Google Rating</div>
+        </div>
+        <div class="trust-item">
+          <div class="value">🛡️ NATE</div>
+          <div class="label">Certified Techs</div>
+        </div>
+        <div class="trust-item">
+          <div class="value">🕐 24/7</div>
+          <div class="label">Emergency Service</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair vs Replace -->
+  <section class="section section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Repair or Replace?</h2>
+        <p>Not sure if you need a repair or a new system? Here's a quick guide to help you decide.</p>
+      </div>
+
+      <div class="repair-grid">
+        <div class="card">
+          <div class="repair-card-header">
+            <div class="repair-icon repair-icon-blue">🔧</div>
+            <h3>Consider Repair</h3>
+          </div>
+          <ul class="repair-list">
+            <li><span class="check-icon">✓</span> System is less than 10 years old</li>
+            <li><span class="check-icon">✓</span> Repair cost is under 50% of replacement</li>
+            <li><span class="check-icon">✓</span> Only minor issues or maintenance needed</li>
+            <li><span class="check-icon">✓</span> Energy bills are still reasonable</li>
+          </ul>
+          <a href="#schedule" class="btn btn-outline" style="width: 100%;">Schedule Diagnosis →</a>
+        </div>
+
+        <div class="card" style="border-color: hsl(var(--accent) / 0.3);">
+          <div class="repair-card-header">
+            <div class="repair-icon repair-icon-orange">🔄</div>
+            <h3>Consider Replacing</h3>
+          </div>
+          <ul class="repair-list">
+            <li><span class="x-icon">✗</span> System is 15+ years old</li>
+            <li><span class="x-icon">✗</span> Frequent breakdowns & repairs</li>
+            <li><span class="x-icon">✗</span> Rising energy bills</li>
+            <li><span class="x-icon">✗</span> Uneven heating/cooling in home</li>
+            <li><span class="x-icon">✗</span> Uses R-22 refrigerant (phased out)</li>
+          </ul>
+          <a href="#schedule" class="btn btn-accent" style="width: 100%;">Get Free Estimate →</a>
+        </div>
+      </div>
+
+      <p style="text-align: center; color: hsl(var(--muted-foreground)); margin-top: 2rem;">
+        Still unsure? Our technicians provide honest assessments with no pressure to buy.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our HVAC Services</h2>
+        <p>Comprehensive heating and cooling solutions for your home or business.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="card">
+          <div class="service-icon service-icon-blue">❄️</div>
+          <h3>AC Repair</h3>
+          <p>Fast, reliable air conditioning repairs to keep you cool. Same-day service available.</p>
+          <a href="#schedule" class="learn-more">Learn More →</a>
+        </div>
+
+        <div class="card">
+          <div class="service-icon service-icon-red">🔥</div>
+          <h3>Heating Repair</h3>
+          <p>Expert furnace and heat pump repairs. Don't freeze—we'll restore your warmth fast.</p>
+          <a href="#schedule" class="learn-more">Learn More →</a>
+        </div>
+
+        <div class="card">
+          <div class="service-icon service-icon-primary">⚙️</div>
+          <h3>System Installation</h3>
+          <p>Professional installation of high-efficiency HVAC systems with manufacturer warranties.</p>
+          <a href="#schedule" class="learn-more">Learn More →</a>
+        </div>
+
+        <div class="card">
+          <div class="service-icon service-icon-green">🔧</div>
+          <h3>Maintenance</h3>
+          <p>Preventive maintenance plans to extend system life and prevent costly breakdowns.</p>
+          <a href="#schedule" class="learn-more">Learn More →</a>
+        </div>
+
+        <div class="card">
+          <div class="service-icon service-icon-accent">💨</div>
+          <h3>Duct Services</h3>
+          <p>Duct cleaning, sealing, and repair to improve air quality and system efficiency.</p>
+          <a href="#schedule" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance Plans -->
+  <section id="maintenance" class="section section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Maintenance Plans</h2>
+        <p>Protect your investment with regular maintenance. Save money, prevent breakdowns, and extend system life.</p>
+      </div>
+
+      <div class="plans-grid">
+        <div class="card plan-card">
+          <div class="plan-icon plan-icon-primary">🛡️</div>
+          <h3>Basic</h3>
+          <div class="plan-price">$149<span class="plan-period">/year</span></div>
+          <p class="plan-description">Essential protection for your HVAC system</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Annual tune-up (1 visit)</li>
+            <li><span class="check">✓</span> Priority scheduling</li>
+            <li><span class="check">✓</span> 10% off repairs</li>
+            <li><span class="check">✓</span> Filter replacement reminder</li>
+          </ul>
+          <a href="#schedule" class="btn btn-outline" style="width: 100%;">Choose Basic</a>
+        </div>
+
+        <div class="card plan-card popular">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-icon plan-icon-accent">⭐</div>
+          <h3>Comfort</h3>
+          <div class="plan-price">$249<span class="plan-period">/year</span></div>
+          <p class="plan-description">Complete peace of mind coverage</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Bi-annual tune-ups (2 visits)</li>
+            <li><span class="check">✓</span> Same-day emergency service</li>
+            <li><span class="check">✓</span> 15% off repairs</li>
+            <li><span class="check">✓</span> No overtime charges</li>
+            <li><span class="check">✓</span> Free diagnostic ($89 value)</li>
+            <li><span class="check">✓</span> Thermostat check included</li>
+          </ul>
+          <a href="#schedule" class="btn btn-accent" style="width: 100%;">Choose Comfort</a>
+        </div>
+
+        <div class="card plan-card">
+          <div class="plan-icon plan-icon-primary">⚡</div>
+          <h3>Premium</h3>
+          <div class="plan-price">$399<span class="plan-period">/year</span></div>
+          <p class="plan-description">Maximum protection & savings</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Quarterly inspections (4 visits)</li>
+            <li><span class="check">✓</span> 24/7 priority emergency service</li>
+            <li><span class="check">✓</span> 20% off all repairs</li>
+            <li><span class="check">✓</span> No overtime or trip charges</li>
+            <li><span class="check">✓</span> Free diagnostics</li>
+            <li><span class="check">✓</span> Duct inspection included</li>
+            <li><span class="check">✓</span> Indoor air quality check</li>
+            <li><span class="check">✓</span> Extended parts warranty</li>
+          </ul>
+          <a href="#schedule" class="btn btn-outline" style="width: 100%;">Choose Premium</a>
+        </div>
+      </div>
+
+      <p style="text-align: center; color: hsl(var(--primary)); font-weight: 600; margin-top: 2rem;">
+        💰 {FINANCING_OR_PROMO}
+      </p>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="reviews-stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+        <h2>500+ 5-Star Reviews</h2>
+        <p>See why {CITY} homeowners trust us with their comfort.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="review-text">"Our AC died on the hottest day of summer. They came out within 2 hours and had us cool again by dinner. Professional, fair pricing, and friendly technicians!"</p>
+          <div class="review-footer">
+            <div class="review-author">
+              <strong>Sarah M.</strong>
+              <span>{CITY}</span>
+            </div>
+            <span class="review-service">AC Repair</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="review-text">"Best HVAC company I've ever worked with. They installed a new system and took the time to explain everything. No pushy sales tactics—just honest advice."</p>
+          <div class="review-footer">
+            <div class="review-author">
+              <strong>Mike R.</strong>
+              <span>{CITY}</span>
+            </div>
+            <span class="review-service">Installation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="review-text">"We've used them for years for maintenance. Always on time, always thorough. Our 15-year-old furnace is still running great thanks to their care."</p>
+          <div class="review-footer">
+            <div class="review-author">
+              <strong>Jennifer L.</strong>
+              <span>{CITY}</span>
+            </div>
+            <span class="review-service">Maintenance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="badges-container">
+        <h3>Certified & Trusted</h3>
+        <div class="badges-grid">
+          <div class="badge-item">
+            <div class="badge-icon">🛡️</div>
+            <div>
+              <strong>NATE Certified</strong>
+              <span>Industry Gold Standard</span>
+            </div>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon">🏆</div>
+            <div>
+              <strong>EPA Certified</strong>
+              <span>Environmental Safety</span>
+            </div>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon">👍</div>
+            <div>
+              <strong>BBB A+ Rating</strong>
+              <span>Trusted Business</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section section-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Got questions? We've got answers. Can't find what you're looking for? Give us a call!</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How quickly can you come out for an emergency?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            We offer 24/7 emergency service and typically respond within 2-4 hours for urgent calls in the {CITY} area. Same-day service is available for most non-emergency repairs.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you offer free estimates?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            Yes! We provide free, no-obligation estimates for all new system installations. For repairs, we charge a small diagnostic fee that's waived if you proceed with the repair.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What brands do you install and service?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            We're factory-trained on all major brands including Carrier, Trane, Lennox, Rheem, Goodman, and more. We can service any make or model of HVAC equipment.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How often should I have my HVAC system serviced?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            We recommend professional maintenance twice a year—once for heating in fall and once for cooling in spring. Regular maintenance can extend your system's life by 5-10 years and improve efficiency by up to 25%.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you offer financing options?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            Yes! {FINANCING_OR_PROMO}. We work with multiple lenders to find the best rates for your situation.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Are your technicians certified?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            Absolutely. All our technicians are NATE, EPA certified and undergo continuous training. They're also background-checked and drug-tested for your peace of mind.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What areas do you serve?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            We proudly serve {CITY}, Surrounding Areas and the surrounding communities. Call us to confirm service availability in your area.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What's included in a maintenance visit?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            Our comprehensive tune-up includes system inspection, cleaning, lubrication, electrical checks, refrigerant level check, thermostat calibration, and a written report of findings with any recommendations.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="schedule" class="cta-section">
+    <div class="container cta-content">
+      <div class="cta-badge">
+        📍 Serving {CITY}, Surrounding Areas
+      </div>
+      <h2>Ready for Reliable Comfort?</h2>
+      <p>Schedule your service today and experience the difference of working with {CITY}'s most trusted HVAC team.</p>
+      <div class="cta-buttons">
+        <a href="tel:{PHONE}" class="btn btn-hero">📞 Call {PHONE}</a>
+        <a href="mailto:info@hvacpro.com" class="btn btn-hero-outline">📅 Request Callback</a>
+      </div>
+      <div class="hours-grid">
+        <div>
+          <strong>Mon - Fri</strong>
+          <span>7:00 AM - 7:00 PM</span>
+        </div>
+        <div>
+          <strong>Saturday</strong>
+          <span>8:00 AM - 5:00 PM</span>
+        </div>
+        <div>
+          <strong>Sunday</strong>
+          <span>Emergency Only</span>
+        </div>
+        <div>
+          <strong>Emergency</strong>
+          <span>24/7 Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <div class="footer-logo-icon">❄</div>
+            <div>
+              <strong style="font-size: 1.125rem;">{BUSINESS_NAME}</strong>
+              <div style="font-size: 0.875rem; opacity: 0.7;">Your Trusted HVAC Partner</div>
+            </div>
+          </div>
+          <p>Providing reliable heating and cooling services to {CITY} and surrounding areas for over 15 years.</p>
+          <div class="footer-certs">
+            <span class="footer-cert">NATE Certified</span>
+            <span class="footer-cert">EPA Certified</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Contact Us</h4>
+          <ul class="footer-list">
+            <li>📞 <a href="tel:{PHONE}">{PHONE}</a></li>
+            <li>✉️ <a href="mailto:info@hvacpro.com">info@hvacpro.com</a></li>
+            <li>📍 {CITY}, {STATE}</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Business Hours</h4>
+          <ul class="footer-list">
+            <li>🕐 Mon-Fri: 7:00 AM - 7:00 PM</li>
+            <li style="padding-left: 1.5rem;">Sat: 8:00 AM - 5:00 PM</li>
+            <li style="padding-left: 1.5rem;">Sun: Emergency Only</li>
+            <li class="footer-emergency">🚨 24/7 Emergency Service</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 {BUSINESS_NAME}. All rights reserved. | License #{STATE}-HVAC-12345
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA (Mobile) -->
+  <div class="sticky-cta">
+    <div class="sticky-cta-inner">
+      <a href="#schedule" class="btn btn-accent">📅 Schedule</a>
+      <a href="tel:{PHONE}" class="btn btn-primary">📞 Call Now</a>
+    </div>
+  </div>
+
+  <div class="mobile-spacer"></div>
+
+  <script>
+    function toggleFaq(button) {
+      const answer = button.nextElementSibling;
+      const isActive = button.classList.contains('active');
+      
+      // Close all other FAQs
+      document.querySelectorAll('.faq-question.active').forEach(q => {
+        q.classList.remove('active');
+        q.nextElementSibling.classList.remove('active');
+      });
+      
+      // Toggle current FAQ
+      if (!isActive) {
+        button.classList.add('active');
+        answer.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
