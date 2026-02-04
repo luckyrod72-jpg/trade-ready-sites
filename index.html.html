@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BUSINESS_NAME}} | Licensed Electrician in {{CITY}}, {{STATE}}</title>
+  <meta name="description" content="Trusted electrical services in {{CITY}}, {{STATE}}. Panel upgrades, outlet installation, EV chargers, and 24/7 emergency repairs. Licensed, insured, and satisfaction guaranteed.">
+  <meta name="keywords" content="electrician {{CITY}}, electrical services {{STATE}}, panel upgrade, EV charger installation, emergency electrician, licensed electrician">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{BUSINESS_NAME}} | Licensed Electrician in {{CITY}}, {{STATE}}">
+  <meta property="og:description" content="Safe, reliable electrical services. Panel upgrades, outlets, lighting, EV chargers, and 24/7 emergency repairs.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "{{BUSINESS_NAME}}",
+    "telephone": "{{PHONE}}",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ADDRESS}}",
+      "addressLocality": "{{CITY}}",
+      "addressRegion": "{{STATE}}",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "{{CITY}}"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "16:00"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Electrical Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Panel Upgrades"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Outlet Installation & Repair"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lighting Services"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "EV Charger Installation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Electrical Troubleshooting"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Emergency Electrical Services"}}
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "127"
+    }
+  }
+  </script>
+  
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --background: hsl(220, 25%, 97%);
+      --foreground: hsl(220, 40%, 13%);
+      --card: hsl(0, 0%, 100%);
+      --card-foreground: hsl(220, 40%, 13%);
+      --primary: hsl(220, 60%, 20%);
+      --primary-foreground: hsl(0, 0%, 100%);
+      --secondary: hsl(220, 30%, 95%);
+      --secondary-foreground: hsl(220, 40%, 13%);
+      --muted: hsl(220, 20%, 94%);
+      --muted-foreground: hsl(220, 15%, 45%);
+      --accent: hsl(45, 95%, 50%);
+      --accent-foreground: hsl(220, 40%, 13%);
+      --destructive: hsl(0, 84%, 60%);
+      --destructive-foreground: hsl(0, 0%, 100%);
+      --border: hsl(220, 20%, 88%);
+      --electric-amber: hsl(45, 95%, 50%);
+      --electric-amber-dark: hsl(40, 90%, 42%);
+      --navy-deep: hsl(220, 60%, 15%);
+      --navy-medium: hsl(220, 50%, 25%);
+      --safety-green: hsl(145, 65%, 42%);
+      --safety-green-light: hsl(145, 60%, 95%);
+      --warning-orange: hsl(25, 95%, 55%);
+      --trust-blue: hsl(210, 90%, 55%);
+      --trust-blue-light: hsl(210, 80%, 95%);
+      --radius: 0.625rem;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      line-height: 1.2;
+    }
+    
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      border-radius: var(--radius);
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      font-size: 0.875rem;
+    }
+    
+    .btn-cta {
+      background: linear-gradient(135deg, var(--electric-amber) 0%, var(--electric-amber-dark) 100%);
+      color: var(--accent-foreground);
+      padding: 0.75rem 1.5rem;
+      box-shadow: 0 4px 12px hsl(45, 95%, 50%, 0.3);
+    }
+    
+    .btn-cta:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px hsl(45, 95%, 50%, 0.4);
+    }
+    
+    .btn-hero {
+      background: linear-gradient(135deg, var(--electric-amber) 0%, var(--electric-amber-dark) 100%);
+      color: var(--accent-foreground);
+      font-weight: 700;
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 12px hsl(45, 95%, 50%, 0.3);
+    }
+    
+    .btn-hero:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px hsl(45, 95%, 50%, 0.4);
+    }
+    
+    .btn-hero-outline {
+      background: transparent;
+      color: var(--primary-foreground);
+      font-weight: 700;
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+      border: 2px solid var(--primary-foreground);
+    }
+    
+    .btn-hero-outline:hover {
+      background: hsl(0, 0%, 100%, 0.1);
+    }
+    
+    .btn-emergency {
+      background: var(--destructive);
+      color: var(--destructive-foreground);
+      font-weight: 700;
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px hsl(45, 95%, 50%, 0.4); }
+      50% { box-shadow: 0 0 30px hsl(45, 95%, 50%, 0.6); }
+    }
+    
+    /* Icon styling */
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .icon-lg { width: 1.25rem; height: 1.25rem; }
+    .icon-xl { width: 1.5rem; height: 1.5rem; }
+    .icon-2xl { width: 1.75rem; height: 1.75rem; }
+    .icon-3xl { width: 2rem; height: 2rem; }
+    
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: hsl(0, 0%, 100%, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4rem;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .logo-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--primary);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--electric-amber);
+    }
+    
+    .logo-text h1 {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+    
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+    }
+    
+    .trust-badges {
+      display: none;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .trust-badges { display: flex; }
+    }
+    
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-medium) 100%);
+      padding: 5rem 0 7rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 16rem;
+      height: 16rem;
+      background: var(--electric-amber);
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.1;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 25%;
+      right: 25%;
+      width: 24rem;
+      height: 24rem;
+      background: var(--trust-blue);
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.1;
+    }
+    
+    .hero-content {
+      position: relative;
+      max-width: 56rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: hsl(0, 0%, 100%, 0.1);
+      border: 1px solid hsl(0, 0%, 100%, 0.2);
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      color: var(--primary-foreground);
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-foreground);
+      margin-bottom: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero h1 { font-size: 3.75rem; }
+    }
+    
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--electric-amber) 0%, var(--electric-amber-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: hsl(0, 0%, 100%, 0.8);
+      max-width: 42rem;
+      margin: 0 auto 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-subtitle { font-size: 1.25rem; }
+    }
+    
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media (min-width: 640px) {
+      .hero-cta { flex-direction: row; justify-content: center; }
+    }
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-stats { grid-template-columns: repeat(4, 1fr); }
+    }
+    
+    .hero-stat {
+      background: hsl(0, 0%, 100%, 0.05);
+      border: 1px solid hsl(0, 0%, 100%, 0.1);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      backdrop-filter: blur(8px);
+    }
+    
+    .hero-stat svg {
+      color: var(--electric-amber);
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0 auto 0.5rem;
+    }
+    
+    .hero-stat-value {
+      font-weight: 500;
+      color: var(--primary-foreground);
+      font-size: 0.875rem;
+    }
+    
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: hsl(0, 0%, 100%, 0.6);
+    }
+    
+    /* Services */
+    .services {
+      padding: 5rem 0 7rem;
+    }
+    
+    .section-header {
+      max-width: 42rem;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+    
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--trust-blue-light);
+      color: var(--trust-blue);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    
+    .section-badge.secondary {
+      background: var(--secondary);
+      color: var(--primary);
+    }
+    
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .section-title { font-size: 2.25rem; }
+    }
+    
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+    }
+    
+    .services-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card:hover {
+      border-color: hsl(45, 95%, 50%, 0.3);
+      box-shadow: 0 10px 15px -3px hsl(220, 60%, 20%, 0.1), 0 4px 6px -4px hsl(220, 60%, 20%, 0.08);
+    }
+    
+    .service-card.emergency {
+      border-color: hsl(0, 84%, 60%, 0.3);
+      background: hsl(0, 84%, 60%, 0.05);
+    }
+    
+    .service-card .tag-24-7 {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--destructive);
+      color: var(--destructive-foreground);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+    }
+    
+    .service-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      background: hsl(220, 60%, 20%, 0.1);
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .service-card:hover .service-icon {
+      background: var(--electric-amber);
+    }
+    
+    .service-icon svg {
+      width: 1.75rem;
+      height: 1.75rem;
+      color: var(--primary);
+      transition: color 0.3s;
+    }
+    
+    .service-card:hover .service-icon svg {
+      color: var(--accent-foreground);
+    }
+    
+    .service-card.emergency .service-icon {
+      background: hsl(0, 84%, 60%, 0.1);
+    }
+    
+    .service-card.emergency .service-icon svg {
+      color: var(--destructive);
+    }
+    
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .service-desc {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .service-safety {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      background: var(--safety-green-light);
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+    }
+    
+    .service-safety svg {
+      color: var(--safety-green);
+      width: 1rem;
+      height: 1rem;
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+    
+    .service-safety p {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--safety-green);
+    }
+    
+    .trust-banner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background: var(--secondary);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .trust-banner { gap: 3rem; }
+    }
+    
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .trust-item svg {
+      color: var(--safety-green);
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+    
+    /* Warning Checklist */
+    .warnings {
+      background: var(--navy-deep);
+      padding: 5rem 0 7rem;
+    }
+    
+    .warnings .section-header {
+      max-width: 56rem;
+    }
+    
+    .warnings .section-badge {
+      background: hsl(25, 95%, 55%, 0.2);
+      color: var(--warning-orange);
+    }
+    
+    .warnings .section-title,
+    .warnings .section-subtitle {
+      color: var(--primary-foreground);
+    }
+    
+    .warnings .section-subtitle {
+      color: hsl(0, 0%, 100%, 0.7);
+    }
+    
+    .warnings-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media (min-width: 768px) {
+      .warnings-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    .warning-card {
+      background: hsl(0, 0%, 100%, 0.05);
+      border: 1px solid hsl(0, 0%, 100%, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      position: relative;
+      transition: all 0.3s;
+    }
+    
+    .warning-card:hover {
+      border-color: hsl(45, 95%, 50%, 0.5);
+    }
+    
+    .warning-card.urgent {
+      background: hsl(0, 84%, 60%, 0.1);
+      border-color: hsl(0, 84%, 60%, 0.5);
+    }
+    
+    .warning-card.urgent:hover {
+      border-color: var(--destructive);
+    }
+    
+    .warning-urgent-badge {
+      position: absolute;
+      top: -0.5rem;
+      right: -0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--destructive);
+      color: var(--destructive-foreground);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    
+    .warning-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .warning-icon {
+      width: 2rem;
+      height: 2rem;
+      background: hsl(45, 95%, 50%, 0.2);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .warning-icon svg {
+      width: 1rem;
+      height: 1rem;
+      color: var(--electric-amber);
+    }
+    
+    .warning-card.urgent .warning-icon {
+      background: hsl(0, 84%, 60%, 0.2);
+    }
+    
+    .warning-card.urgent .warning-icon svg {
+      color: var(--destructive);
+    }
+    
+    .warning-title {
+      font-weight: 600;
+      color: var(--primary-foreground);
+      margin-bottom: 0.25rem;
+    }
+    
+    .warning-desc {
+      font-size: 0.875rem;
+      color: hsl(0, 0%, 100%, 0.6);
+    }
+    
+    .emergency-cta {
+      background: hsl(0, 84%, 60%, 0.1);
+      border: 1px solid hsl(0, 84%, 60%, 0.3);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .emergency-cta h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-foreground);
+      margin-bottom: 0.5rem;
+    }
+    
+    .emergency-cta p {
+      color: hsl(0, 0%, 100%, 0.7);
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Process */
+    .process {
+      padding: 5rem 0 7rem;
+    }
+    
+    .process-steps {
+      display: grid;
+      gap: 2rem;
+      position: relative;
+    }
+    
+    @media (min-width: 768px) {
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 1024px) {
+      .process-steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    
+    .process-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      position: relative;
+      transition: all 0.3s;
+    }
+    
+    .process-card:hover {
+      border-color: hsl(45, 95%, 50%, 0.5);
+      box-shadow: 0 10px 15px -3px hsl(220, 60%, 20%, 0.1);
+    }
+    
+    .process-number {
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+    }
+    
+    .process-icon {
+      width: 4rem;
+      height: 4rem;
+      background: var(--secondary);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 1.5rem;
+      transition: background 0.3s;
+    }
+    
+    .process-card:hover .process-icon {
+      background: var(--electric-amber);
+    }
+    
+    .process-icon svg {
+      width: 2rem;
+      height: 2rem;
+      color: var(--primary);
+      transition: color 0.3s;
+    }
+    
+    .process-card:hover .process-icon svg {
+      color: var(--accent-foreground);
+    }
+    
+    .process-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .process-desc {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+    }
+    
+    .guarantee-note {
+      max-width: 42rem;
+      margin: 3rem auto 0;
+      background: var(--safety-green-light);
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      text-align: center;
+    }
+    
+    .guarantee-note p {
+      font-weight: 500;
+      color: var(--safety-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .guarantee-note svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+    
+    /* Reviews */
+    .reviews {
+      background: var(--secondary);
+      padding: 5rem 0 7rem;
+    }
+    
+    .reviews-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    
+    @media (min-width: 768px) {
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    .review-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      position: relative;
+      transition: all 0.3s;
+    }
+    
+    .review-card:hover {
+      box-shadow: 0 10px 15px -3px hsl(220, 60%, 20%, 0.1);
+    }
+    
+    .review-quote {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      color: hsl(45, 95%, 50%, 0.2);
+    }
+    
+    .review-quote svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    
+    .review-stars {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .review-stars svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--electric-amber);
+      fill: var(--electric-amber);
+    }
+    
+    .review-text {
+      margin-bottom: 1.5rem;
+    }
+    
+    .review-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .review-author {
+      font-weight: 600;
+    }
+    
+    .review-location {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+    
+    .review-service {
+      background: hsl(220, 60%, 20%, 0.1);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+    }
+    
+    .certifications {
+      background: var(--card);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px hsl(220, 60%, 20%, 0.08);
+    }
+    
+    .certifications h3 {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+    
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .cert-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    
+    .cert-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .cert-icon {
+      width: 4rem;
+      height: 4rem;
+      background: hsl(220, 60%, 20%, 0.1);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+    
+    .cert-icon svg {
+      width: 2rem;
+      height: 2rem;
+      color: var(--primary);
+    }
+    
+    .cert-name {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    
+    /* FAQ */
+    .faq {
+      padding: 5rem 0 7rem;
+    }
+    
+    .faq-list {
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    
+    .faq-item.open {
+      box-shadow: 0 4px 6px -1px hsl(220, 60%, 20%, 0.08);
+    }
+    
+    .faq-question {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--foreground);
+    }
+    
+    .faq-question:hover {
+      background: hsl(220, 30%, 95%, 0.5);
+    }
+    
+    .faq-chevron {
+      transition: transform 0.2s;
+    }
+    
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      padding: 0 1.5rem 1.25rem;
+      color: var(--muted-foreground);
+      display: none;
+    }
+    
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+    
+    .faq-contact {
+      max-width: 48rem;
+      margin: 3rem auto 0;
+      background: var(--trust-blue-light);
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      color: var(--trust-blue);
+    }
+    
+    .faq-contact a {
+      text-decoration: underline;
+    }
+    
+    .faq-contact a:hover {
+      text-decoration: none;
+    }
+    
+    /* Sticky CTA */
+    .sticky-cta {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-medium) 100%);
+      padding: 4rem 0 6rem;
+    }
+    
+    .sticky-cta-content {
+      max-width: 56rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .sticky-cta .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: hsl(0, 0%, 100%, 0.1);
+      border: 1px solid hsl(0, 0%, 100%, 0.2);
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      color: var(--primary-foreground);
+      margin-bottom: 2rem;
+    }
+    
+    .sticky-cta .location-badge svg {
+      color: var(--electric-amber);
+    }
+    
+    .sticky-cta h2 {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--primary-foreground);
+      margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .sticky-cta h2 { font-size: 2.25rem; }
+    }
+    
+    @media (min-width: 1024px) {
+      .sticky-cta h2 { font-size: 3rem; }
+    }
+    
+    .sticky-cta > .sticky-cta-content > p {
+      color: hsl(0, 0%, 100%, 0.8);
+      font-size: 1.125rem;
+      max-width: 42rem;
+      margin: 0 auto 2rem;
+    }
+    
+    .sticky-cta-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    @media (min-width: 640px) {
+      .sticky-cta-buttons { flex-direction: row; justify-content: center; }
+    }
+    
+    .sticky-cta .trust-note {
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+      color: hsl(0, 0%, 100%, 0.6);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0;
+    }
+    
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 1024px) {
+      .footer-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-brand .logo-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    
+    .footer-section h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-section p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-section a {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    
+    .footer-section a:hover {
+      color: var(--electric-amber);
+    }
+    
+    .footer-section .emergency-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      color: var(--safety-green);
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+    
+    .footer-section .emergency-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      background: var(--safety-green);
+      border-radius: 50%;
+    }
+    
+    .footer-bottom {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+    
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+    
+    /* SVG Icons (inline) */
+    .svg-bolt { display: inline-block; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>{{BUSINESS_NAME}}</h1>
+          <p>Licensed & Insured</p>
+        </div>
+      </div>
+      <div class="trust-badges">
+        <span class="trust-badge">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          {{LICENSE_INFO}}
+        </span>
+        <span class="trust-badge">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          24/7 Emergency
+        </span>
+      </div>
+      <a href="tel:{{PHONE}}" class="btn btn-cta">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="hide-mobile">{{PHONE}}</span>
+        <span class="show-mobile">Call Now</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Trusted by 500+ {{CITY}} Homeowners</span>
+      </div>
+      <h1>Safe, Reliable Electrical Services in <span>{{CITY}}, {{STATE}}</span></h1>
+      <p class="hero-subtitle">From panel upgrades to emergency repairs — your family's safety is our priority. Licensed, insured, and committed to code-compliant work.</p>
+      <div class="hero-cta">
+        <a href="tel:{{PHONE}}" class="btn btn-hero">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now: {{PHONE}}
+        </a>
+        <a href="#quote" class="btn btn-hero-outline">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Request Free Quote
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p class="hero-stat-value">{{LICENSE_INFO}}</p>
+          <p class="hero-stat-label">Licensed & Insured</p>
+        </div>
+        <div class="hero-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <p class="hero-stat-value">&lt; 2 Hours</p>
+          <p class="hero-stat-label">Response Time</p>
+        </div>
+        <div class="hero-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          <p class="hero-stat-value">15+ Years</p>
+          <p class="hero-stat-label">Experience</p>
+        </div>
+        <div class="hero-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p class="hero-stat-value">100% Satisfaction</p>
+          <p class="hero-stat-label">Guarantee</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Our Services
+        </div>
+        <h2 class="section-title">Comprehensive Electrical Solutions</h2>
+        <p class="section-subtitle">Every job completed to code with your safety as our top priority. Licensed, insured, and backed by our satisfaction guarantee.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 class="service-title">Panel Upgrades</h3>
+          <p class="service-desc">Upgrade your electrical panel to handle modern demands safely. Includes code-compliant installation and inspection.</p>
+          <div class="service-safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p>Prevents overloaded circuits & fire hazards</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M5 8H4a4 4 0 0 0 0 8h1"/><line x1="7" y1="8" x2="7" y2="16"/><line x1="17" y1="8" x2="17" y2="16"/></svg>
+          </div>
+          <h3 class="service-title">Outlet Installation & Repair</h3>
+          <p class="service-desc">GFCI outlets, USB outlets, and dedicated circuits for appliances. Professional installation that meets NEC standards.</p>
+          <div class="service-safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p>GFCI protection prevents electrical shock</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+          </div>
+          <h3 class="service-title">Lighting Services</h3>
+          <p class="service-desc">Indoor/outdoor lighting, ceiling fans, recessed lighting, and smart home integration.</p>
+          <div class="service-safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p>Proper wiring prevents overheating</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+          </div>
+          <h3 class="service-title">EV Charger Installation</h3>
+          <p class="service-desc">Level 2 home charging stations installed by certified electricians. Includes permit handling and utility coordination.</p>
+          <div class="service-safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p>Dedicated circuit prevents electrical fires</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3 class="service-title">Troubleshooting & Diagnostics</h3>
+          <p class="service-desc">Expert diagnosis of electrical issues, from flickering lights to tripping breakers. Fast identification, clear solutions.</p>
+          <div class="service-safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p>Identifies hidden hazards before they cause harm</p>
+          </div>
+        </div>
+        <div class="service-card emergency">
+          <span class="tag-24-7">24/7</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="service-title">Emergency Services</h3>
+          <p class="service-desc">24/7 emergency response for power outages, sparking outlets, burning smells, and other urgent electrical issues.</p>
+          <div class="service-safety">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p>Immediate response prevents property damage</p>
+          </div>
+        </div>
+      </div>
+      <div class="trust-banner">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          All Work to NEC Code
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Permits Pulled
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Clean Job Sites
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Written Warranties
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warning Signs -->
+  <section class="warnings">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Safety First
+        </div>
+        <h2 class="section-title">Warning Signs You Shouldn't Ignore</h2>
+        <p class="section-subtitle">Electrical problems rarely fix themselves. Recognize these signs and protect your home before small issues become emergencies.</p>
+      </div>
+      <div class="warnings-grid" style="max-width: 56rem; margin: 0 auto 3rem;">
+        <div class="warning-card">
+          <div class="warning-content">
+            <div class="warning-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="warning-title">Flickering or Dimming Lights</h3>
+              <p class="warning-desc">Could indicate loose wiring, overloaded circuits, or a failing panel.</p>
+            </div>
+          </div>
+        </div>
+        <div class="warning-card urgent">
+          <span class="warning-urgent-badge">!</span>
+          <div class="warning-content">
+            <div class="warning-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="warning-title">Burning Smell from Outlets</h3>
+              <p class="warning-desc">Immediate fire hazard. Turn off power and call immediately.</p>
+            </div>
+          </div>
+        </div>
+        <div class="warning-card urgent">
+          <span class="warning-urgent-badge">!</span>
+          <div class="warning-content">
+            <div class="warning-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="warning-title">Warm or Discolored Outlets</h3>
+              <p class="warning-desc">Sign of dangerous overheating that can lead to electrical fires.</p>
+            </div>
+          </div>
+        </div>
+        <div class="warning-card">
+          <div class="warning-content">
+            <div class="warning-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="warning-title">Frequent Breaker Trips</h3>
+              <p class="warning-desc">Your circuits are overloaded or there's a short somewhere.</p>
+            </div>
+          </div>
+        </div>
+        <div class="warning-card urgent">
+          <span class="warning-urgent-badge">!</span>
+          <div class="warning-content">
+            <div class="warning-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="warning-title">Sparks When Plugging In</h3>
+              <p class="warning-desc">Internal arcing that can ignite nearby materials.</p>
+            </div>
+          </div>
+        </div>
+        <div class="warning-card">
+          <div class="warning-content">
+            <div class="warning-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="warning-title">Buzzing Sounds from Panel</h3>
+              <p class="warning-desc">Loose connections or failing breakers need immediate attention.</p>
+            </div>
+          </div>
+        </div>
+        <div class="warning-card">
+          <div class="warning-content">
+            <div class="warning-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="warning-title">Outlets Don't Hold Plugs</h3>
+              <p class="warning-desc">Worn outlets are a shock and fire risk, especially around children.</p>
+            </div>
+          </div>
+        </div>
+        <div class="warning-card">
+          <div class="warning-content">
+            <div class="warning-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="warning-title">Two-Prong Outlets (No Ground)</h3>
+              <p class="warning-desc">Outdated outlets without ground protection increase shock risk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="emergency-cta" style="max-width: 56rem; margin: 0 auto;">
+        <h3>Seeing any of these signs?</h3>
+        <p>Don't wait. Electrical problems get worse—and more dangerous—over time.</p>
+        <a href="tel:{{PHONE}}" class="btn btn-emergency">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call for Emergency Service: {{PHONE}}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge secondary">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          How We Work
+        </div>
+        <h2 class="section-title">Simple, Transparent Process</h2>
+        <p class="section-subtitle">No surprises, no hidden fees. From inspection to completion, you'll know exactly what's happening every step of the way.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-card">
+          <span class="process-number">01</span>
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3 class="process-title">Inspect</h3>
+          <p class="process-desc">We thoroughly assess your electrical system, identify issues, and document everything with photos.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-number">02</span>
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="process-title">Quote</h3>
+          <p class="process-desc">You receive a clear, itemized quote with no hidden fees. We explain every line item so you understand the work.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-number">03</span>
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="process-title">Fix</h3>
+          <p class="process-desc">Our licensed electricians complete the work to code, keeping your space clean and respecting your home.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-number">04</span>
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="process-title">Verify</h3>
+          <p class="process-desc">We test all work, walk you through what we did, and provide documentation for your records and peace of mind.</p>
+        </div>
+      </div>
+      <div class="guarantee-note">
+        <p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          All work comes with a written warranty and our 100% satisfaction guarantee.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" style="background: var(--card);">
+          <svg class="icon" viewBox="0 0 24 24" fill="var(--electric-amber)" stroke="var(--electric-amber)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Customer Reviews
+        </div>
+        <h2 class="section-title">Trusted by Your Neighbors</h2>
+        <p class="section-subtitle">Don't just take our word for it. See what {{CITY}} homeowners are saying about our electrical services.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-quote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          </div>
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"Had an electrical emergency at 11pm and they were here within an hour. Professional, honest about pricing, and fixed the issue quickly. Highly recommend!"</p>
+          <div class="review-footer">
+            <div>
+              <p class="review-author">Michael R.</p>
+              <p class="review-location">{{CITY}}</p>
+            </div>
+            <span class="review-service">Emergency Repair</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          </div>
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"They upgraded our 60-year-old panel. The work was incredibly clean, they pulled all permits, and explained everything. Our insurance company was impressed!"</p>
+          <div class="review-footer">
+            <div>
+              <p class="review-author">Sarah T.</p>
+              <p class="review-location">{{CITY}}</p>
+            </div>
+            <span class="review-service">Panel Upgrade</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          </div>
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"Best EV charger installation experience. They handled everything from permits to utility coordination. Charger works perfectly and looks professional."</p>
+          <div class="review-footer">
+            <div>
+              <p class="review-author">David & Linda K.</p>
+              <p class="review-location">{{CITY}}</p>
+            </div>
+            <span class="review-service">EV Charger</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          </div>
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"Finally, an electrician who shows up on time! They replaced all our outlets and added GFCI protection. Fair pricing and excellent work quality."</p>
+          <div class="review-footer">
+            <div>
+              <p class="review-author">Jennifer M.</p>
+              <p class="review-location">{{CITY}}</p>
+            </div>
+            <span class="review-service">Outlet Installation</span>
+          </div>
+        </div>
+      </div>
+      <div class="certifications">
+        <h3>Credentials & Certifications</h3>
+        <div class="cert-grid">
+          <div class="cert-item">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <p class="cert-name">Licensed Master Electrician</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <p class="cert-name">Fully Insured & Bonded</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <p class="cert-name">BBB A+ Rating</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="cert-name">5-Star Google Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge secondary">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          FAQ
+        </div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Get answers to common questions about our electrical services.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <button class="faq-question">
+            Are you licensed and insured?
+            <svg class="faq-chevron icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes, we are fully licensed ({{LICENSE_INFO}}), insured, and bonded. We carry comprehensive liability insurance and workers' compensation to protect you and your property. Copies of our credentials are available upon request.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <button class="faq-question">
+            Do you pull permits for electrical work?
+            <svg class="faq-chevron icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Absolutely. We pull all required permits for work that requires them (panel upgrades, new circuits, EV chargers, etc.). This ensures your work is inspected, up to code, and documented—which is important for insurance and resale value.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <button class="faq-question">
+            How quickly can you respond to emergencies?
+            <svg class="faq-chevron icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">We offer 24/7 emergency service and typically respond within 1-2 hours for urgent situations like power outages, sparking outlets, or burning smells. For life-threatening emergencies, always call 911 first.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <button class="faq-question">
+            How much does an electrical panel upgrade cost?
+            <svg class="faq-chevron icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Panel upgrade costs vary based on your current setup and needs, typically ranging from $1,500-$4,000. We provide free, detailed quotes with no hidden fees. The quote includes the panel, labor, permits, and inspection.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <button class="faq-question">
+            Do you offer warranties on your work?
+            <svg class="faq-chevron icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes, all our work comes with a minimum 1-year warranty on labor. Many products also carry manufacturer warranties (panels, EV chargers, etc.). We stand behind our work and will address any issues promptly.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <button class="faq-question">
+            Can you install an EV charger in my older home?
+            <svg class="faq-chevron icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Usually, yes. We'll assess your electrical panel's capacity and recommend any necessary upgrades. Many older homes need a panel upgrade to support a Level 2 EV charger, which we can handle as part of the project.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <button class="faq-question">
+            What payment methods do you accept?
+            <svg class="faq-chevron icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">We accept cash, check, and all major credit cards. For larger projects, we also offer financing options through trusted partners. Payment is due upon completion unless otherwise arranged.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <button class="faq-question">
+            Do you clean up after the job?
+            <svg class="faq-chevron icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Absolutely. We treat your home with respect, use drop cloths to protect flooring, and clean up thoroughly before we leave. You shouldn't know we were there except for the improved electrical work.</div>
+        </div>
+      </div>
+      <div class="faq-contact">
+        <strong>Still have questions?</strong> Call us at <a href="tel:{{PHONE}}">{{PHONE}}</a> or request a free quote.
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky CTA -->
+  <section class="sticky-cta" id="quote">
+    <div class="container sticky-cta-content">
+      <div class="location-badge">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Proudly Serving {{CITY}}, {{STATE}} & Surrounding Areas
+      </div>
+      <h2>Ready to Make Your Home Safer?</h2>
+      <p>Whether it's a quick repair or a major upgrade, our licensed electricians are ready to help. Get a free quote today—no obligation, no pressure.</p>
+      <div class="sticky-cta-buttons">
+        <a href="tel:{{PHONE}}" class="btn btn-hero">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call: {{PHONE}}
+        </a>
+        <a href="#quote" class="btn btn-hero-outline">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Get Free Quote
+        </a>
+      </div>
+      <p class="trust-note">Licensed ({{LICENSE_INFO}}) • Insured • 100% Satisfaction Guaranteed</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--electric-amber);"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <h3 style="font-weight: 700;">{{BUSINESS_NAME}}</h3>
+              <p style="font-size: 0.75rem; color: var(--muted-foreground);">Licensed & Insured</p>
+            </div>
+          </div>
+          <p>Your trusted local electrician serving {{CITY}}, {{STATE}} and surrounding areas. Safety-first approach with code-compliant work guaranteed.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:{{PHONE}}"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> {{PHONE}}</a></li>
+            <li><a href="mailto:info@example.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@example.com</a></li>
+            <li style="display: flex; align-items: flex-start; gap: 0.5rem; color: var(--muted-foreground); font-size: 0.875rem;"><svg class="icon" style="flex-shrink: 0; margin-top: 2px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> {{ADDRESS}}<br>{{CITY}}, {{STATE}}</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Business Hours</h4>
+          <ul style="font-size: 0.875rem; color: var(--muted-foreground);">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon-Fri: 7AM - 6PM</li>
+            <li style="padding-left: 1.5rem;">Sat: 8AM - 4PM</li>
+            <li style="padding-left: 1.5rem;">Sun: Emergency Only</li>
+          </ul>
+          <div class="emergency-badge">
+            <span class="emergency-dot"></span>
+            24/7 Emergency Service
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Panel Upgrades</a></li>
+            <li><a href="#services">Outlet Installation</a></li>
+            <li><a href="#services">Lighting Services</a></li>
+            <li><a href="#services">EV Charger Installation</a></li>
+            <li><a href="#services">Emergency Repairs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 {{BUSINESS_NAME}}. All rights reserved.</p>
+        <p>License: {{LICENSE_INFO}} • Fully Insured & Bonded</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

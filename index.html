@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaFlow Plumbing | Licensed Plumber in Austin | 24/7 Emergency Service</title>
+  <meta name="description" content="AquaFlow Plumbing provides fast, reliable plumbing services in Austin. Drain cleaning, leak repair, water heaters & more. Licensed & insured. Call for same-day service!">
+  <meta name="keywords" content="plumber Austin, emergency plumber, drain cleaning, water heater repair, leak repair, Downtown Austin, South Congress, East Austin">
+  <link rel="canonical" href="">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="AquaFlow Plumbing | Licensed Plumber in Austin">
+  <meta property="og:description" content="Fast, reliable plumbing services in Austin. 24/7 Emergency Service Available.">
+  <meta property="og:type" content="website">
+  
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "AquaFlow Plumbing",
+    "telephone": "(512) 555-0123",
+    "areaServed": [
+      {"@type": "City", "name": "Austin"},
+      {"@type": "Place", "name": "Downtown Austin"},
+      {"@type": "Place", "name": "South Congress"},
+      {"@type": "Place", "name": "East Austin"},
+      {"@type": "Place", "name": "Mueller"},
+      {"@type": "Place", "name": "Hyde Park"},
+      {"@type": "Place", "name": "Tarrytown"},
+      {"@type": "Place", "name": "Westlake"},
+      {"@type": "Place", "name": "Cedar Park"},
+      {"@type": "Place", "name": "Round Rock"},
+      {"@type": "Place", "name": "Pflugerville"},
+      {"@type": "Place", "name": "Lakeway"},
+      {"@type": "Place", "name": "Bee Cave"}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Plumbing Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Drain Cleaning"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Leak Repair"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Water Heater Repair"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Water Heater Installation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Toilet Repair"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sewer Line Service"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bathroom Remodeling"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Emergency Plumbing"}}
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "247"
+    },
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "license": "TX License #M-12345"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: 210 80% 30%;
+      --primary-foreground: 210 20% 98%;
+      --secondary: 210 20% 96%;
+      --accent: 38 92% 50%;
+      --accent-foreground: 38 92% 10%;
+      --background: 0 0% 100%;
+      --foreground: 210 30% 15%;
+      --muted: 210 15% 65%;
+      --muted-foreground: 210 15% 45%;
+      --card: 0 0% 100%;
+      --border: 210 20% 90%;
+      --success: 142 70% 35%;
+      --destructive: 0 84% 60%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: hsl(var(--foreground));
+      background: hsl(var(--background));
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Emergency Banner */
+    .emergency-banner {
+      background: hsl(var(--destructive));
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .emergency-banner a {
+      color: white;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, hsl(210 80% 30%) 0%, hsl(210 85% 22%) 100%);
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -25%;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .trust-badge {
+      background: rgba(255,255,255,0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: hsl(var(--accent));
+      margin-top: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .btn-primary {
+      background: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: background 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .value-props {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 640px) {
+      .value-props {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .value-prop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .value-prop::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: hsl(var(--success));
+      border-radius: 50%;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 4rem 1rem;
+    }
+
+    .section-alt {
+      background: hsl(var(--secondary));
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: hsl(var(--foreground));
+    }
+
+    .section-title p {
+      font-size: 1.125rem;
+      color: hsl(var(--muted-foreground));
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Service Cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: hsl(var(--card));
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: hsla(210, 80%, 30%, 0.1);
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: hsl(var(--foreground));
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    /* Service Area */
+    .area-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: hsl(var(--primary) / 0.1);
+      color: hsl(var(--primary));
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .neighborhoods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .neighborhood {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: hsl(var(--card));
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .neighborhood::before {
+      content: '✓';
+      color: hsl(var(--success));
+      font-weight: 700;
+    }
+
+    /* Pricing Section */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+    }
+
+    .pricing-card {
+      background: hsl(var(--card));
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .pricing-card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: hsl(var(--foreground));
+    }
+
+    .price-range {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: hsl(var(--primary));
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card p {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .pricing-note {
+      background: hsl(var(--primary) / 0.05);
+      border: 1px solid hsl(var(--primary) / 0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pricing-note h4 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: hsl(var(--foreground));
+    }
+
+    .pricing-note p {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    /* Trust Section */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+    }
+
+    .trust-item {
+      display: flex;
+      gap: 1rem;
+      background: hsl(var(--card));
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      background: hsl(var(--success) / 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.25rem;
+    }
+
+    .trust-item h3 {
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: hsl(var(--foreground));
+    }
+
+    .trust-item p {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .license-box {
+      background: hsl(var(--primary) / 0.05);
+      border: 1px solid hsl(var(--primary) / 0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 0.875rem;
+    }
+
+    .license-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Reviews Section */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: hsl(var(--card));
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .review-stars {
+      color: hsl(var(--accent));
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    .review-card blockquote {
+      font-style: italic;
+      color: hsl(var(--foreground));
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      background: hsl(var(--primary));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .review-name {
+      font-weight: 600;
+      color: hsl(var(--foreground));
+    }
+
+    .review-location {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    /* FAQ Section */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: hsl(var(--card));
+      border-radius: 0.75rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: hsl(var(--foreground));
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 300;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+    }
+
+    .faq-answer p {
+      padding: 0 1.5rem 1.25rem;
+      color: hsl(var(--muted-foreground));
+    }
+
+    /* Footer */
+    .footer {
+      background: hsl(var(--primary));
+      color: white;
+      padding: 3rem 1rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmin(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .footer p, .footer li {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+      opacity: 0.7;
+    }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: hsl(var(--accent));
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    }
+
+    @media (min-width: 768px) {
+      .sticky-cta {
+        display: none;
+      }
+    }
+
+    .sticky-cta a {
+      color: hsl(var(--accent-foreground));
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.125rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Add padding for sticky CTA on mobile */
+    @media (max-width: 767px) {
+      .footer {
+        padding-bottom: 5rem;
+      }
+    }
+
+    /* Icons (simple text-based) */
+    .icon {
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    ⚠️ 24/7 Emergency Service Available • 
+    <a href="tel:5125550123">📞 (512) 555-0123</a>
+    <span>(Available 24/7)</span>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="trust-badges">
+        <div class="trust-badge">⭐ 4.9★ Rating</div>
+        <div class="trust-badge">🛡️ Licensed & Insured</div>
+        <div class="trust-badge">⏰ Same-Day Service</div>
+      </div>
+      
+      <h1>
+        Austin's Most Trusted
+        <span>Plumbing Experts</span>
+      </h1>
+      
+      <p>Fast, honest, and upfront pricing. From leaky faucets to full remodels—AquaFlow Plumbing has you covered.</p>
+      
+      <div class="cta-buttons">
+        <a href="tel:5125550123" class="btn-primary">
+          📞 Call Now: (512) 555-0123
+        </a>
+        <a href="#request-service" class="btn-secondary">
+          📅 Request Service Online
+        </a>
+      </div>
+      
+      <div class="value-props">
+        <div class="value-prop">Free Estimates</div>
+        <div class="value-prop">No Hidden Fees</div>
+        <div class="value-prop">Satisfaction Guaranteed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Common Plumbing Fixes</h2>
+        <p>From quick repairs to major installations—we handle it all with transparent pricing.</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💧</div>
+          <h3>Drain Cleaning</h3>
+          <p>Clogged sinks, showers, and floor drains cleared fast with professional equipment.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Leak Repair</h3>
+          <p>Stop water damage now. We fix pipe leaks, faucet drips, and hidden water lines.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🔥</div>
+          <h3>Water Heater</h3>
+          <p>Repair, replacement, and installation. Tank and tankless options available.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🚽</div>
+          <h3>Toilet Repair</h3>
+          <p>Running, clogged, or broken? We fix all toilet issues same-day.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🌊</div>
+          <h3>Sewer Line</h3>
+          <p>Camera inspection, cleaning, and trenchless repair for main sewer lines.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Bathroom Remodel</h3>
+          <p>Full plumbing for renovations—fixtures, pipes, and rough-in work.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">⚠️</div>
+          <h3>Emergency Service</h3>
+          <p>Burst pipes, flooding, or no hot water? We're available 24/7.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🔩</div>
+          <h3>General Repairs</h3>
+          <p>Garbage disposals, outdoor faucets, shut-off valves, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <div class="area-badge">📍 Service Area</div>
+        <h2>Proudly Serving Austin & Surrounding Areas</h2>
+        <p>Fast response times throughout our service area. Most calls answered within 60 minutes.</p>
+      </div>
+      
+      <div class="neighborhoods-grid">
+        <div class="neighborhood">Downtown Austin</div>
+        <div class="neighborhood">South Congress</div>
+        <div class="neighborhood">East Austin</div>
+        <div class="neighborhood">Mueller</div>
+        <div class="neighborhood">Hyde Park</div>
+        <div class="neighborhood">Tarrytown</div>
+        <div class="neighborhood">Westlake</div>
+        <div class="neighborhood">Cedar Park</div>
+        <div class="neighborhood">Round Rock</div>
+        <div class="neighborhood">Pflugerville</div>
+        <div class="neighborhood">Lakeway</div>
+        <div class="neighborhood">Bee Cave</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>What It Costs</h2>
+        <p>Transparent pricing—no surprises. Final quotes provided before work begins.</p>
+      </div>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Drain Cleaning</h3>
+          <div class="price-range">$99 – $350</div>
+          <p>Simple clogs to main line blockages. Includes camera inspection for persistent issues.</p>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Leak Repair</h3>
+          <div class="price-range">$150 – $500</div>
+          <p>Faucet repairs to pipe replacements. Drywall repair not included.</p>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Water Heater</h3>
+          <div class="price-range">$200 – $2,500+</div>
+          <p>Repairs from $200. Full replacement $800–$2,500+ depending on type and size.</p>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Toilet Repair</h3>
+          <div class="price-range">$85 – $350</div>
+          <p>Running toilets, clogs, replacements. Most repairs same-day.</p>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Sewer Line</h3>
+          <div class="price-range">$300 – $5,000+</div>
+          <p>Camera inspection from $300. Trenchless repair/replacement $2,000–$5,000+.</p>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Emergency Service</h3>
+          <div class="price-range">+$75 – $150</div>
+          <p>After-hours premium. Waived for major repairs exceeding $500.</p>
+        </div>
+      </div>
+      
+      <div class="pricing-note">
+        <h4>💡 Why the range?</h4>
+        <p>Final cost depends on: job complexity, parts needed, accessibility, and time required. We diagnose first, then provide an exact written quote—approved by you before any work begins.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Homeowners Choose Us</h2>
+        <p>We're not just plumbers—we're your neighbors committed to honest, quality work.</p>
+      </div>
+      
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">🛡️</div>
+          <div>
+            <h3>Fully Licensed & Insured</h3>
+            <p>All work meets local codes. Protected coverage for your peace of mind.</p>
+          </div>
+        </div>
+        
+        <div class="trust-item">
+          <div class="trust-icon">✅</div>
+          <div>
+            <h3>Background-Checked Technicians</h3>
+            <p>Every plumber is vetted and drug-tested. Safe for your home and family.</p>
+          </div>
+        </div>
+        
+        <div class="trust-item">
+          <div class="trust-icon">🏆</div>
+          <div>
+            <h3>Satisfaction Guarantee</h3>
+            <p>Not happy? We'll make it right. Your satisfaction is our priority.</p>
+          </div>
+        </div>
+        
+        <div class="trust-item">
+          <div class="trust-icon">👨‍👩‍👧</div>
+          <div>
+            <h3>Local Family Owned</h3>
+            <p>Serving our community for years. We live where you live.</p>
+          </div>
+        </div>
+        
+        <div class="trust-item">
+          <div class="trust-icon">⏰</div>
+          <div>
+            <h3>On-Time Guarantee</h3>
+            <p>We respect your time. Arrive on schedule or your service call is free.</p>
+          </div>
+        </div>
+        
+        <div class="trust-item">
+          <div class="trust-icon">👍</div>
+          <div>
+            <h3>Workmanship Warranty</h3>
+            <p>Quality work backed by warranty. We stand behind every repair.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="license-box">
+        <div class="license-item">
+          <span>🛡️</span>
+          <strong>License:</strong> TX License #M-12345
+        </div>
+        <div class="license-item">
+          <span>🏆</span>
+          <strong>Guarantee:</strong> 100% Satisfaction Guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from real homeowners in your neighborhood.</p>
+      </div>
+      
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"Called at 6 AM with a burst pipe. They were here in 45 minutes and had it fixed before my kids woke up. Lifesavers!"</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-name">Maria S.</div>
+              <div class="review-location">Mueller</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"The tech wore shoe covers, laid down mats, and cleaned up like he was never there. Finally, a plumber who respects your home."</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">J</div>
+            <div>
+              <div class="review-name">James T.</div>
+              <div class="review-location">Westlake</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"They found the problem other plumbers missed and fixed it for less than the original quotes. Honest and thorough."</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">L</div>
+            <div>
+              <div class="review-name">Linda K.</div>
+              <div class="review-location">Round Rock</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Got questions? We've got answers.</p>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How fast can you get here?</button>
+          <div class="faq-answer">
+            <p>For most calls in our service area, we arrive within 60-90 minutes. Emergency calls are prioritized and often faster. We'll give you a specific arrival window when you call.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Do you provide free estimates?</button>
+          <div class="faq-answer">
+            <p>Yes! We provide free estimates for most jobs. For complex issues requiring diagnosis (like hidden leaks), a small service fee may apply—which is waived if you proceed with the repair.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">What are your emergency service hours?</button>
+          <div class="faq-answer">
+            <p>We offer 24/7 emergency service for urgent issues like burst pipes, major leaks, sewage backups, and no hot water. Weekend and after-hours rates may apply.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Are your plumbers licensed and insured?</button>
+          <div class="faq-answer">
+            <p>Absolutely. All our technicians are fully licensed, bonded, and insured. We also perform background checks on every team member for your safety.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">What's included in your guarantee?</button>
+          <div class="faq-answer">
+            <p>Our workmanship is guaranteed. If something we fixed fails within our warranty period, we'll come back and make it right at no additional cost. Parts warranties vary by manufacturer.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Do you offer financing for large jobs?</button>
+          <div class="faq-answer">
+            <p>Yes, we offer flexible financing options for larger projects like water heater replacements or bathroom remodels. Ask us about our payment plans when you call.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">Will you give me an exact price before starting?</button>
+          <div class="faq-answer">
+            <p>Yes. We diagnose the issue, explain what needs to be done, and provide a written quote before any work begins. No surprises—you approve the price first.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">What payment methods do you accept?</button>
+          <div class="faq-answer">
+            <p>We accept cash, checks, and all major credit cards. Payment is due upon completion of the work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>AquaFlow Plumbing</h3>
+          <p>Your trusted local plumbing experts. Fast, reliable service with upfront pricing.</p>
+        </div>
+        
+        <div>
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📞 <a href="tel:5125550123">(512) 555-0123</a></li>
+            <li>📍 Serving Austin & surrounding areas</li>
+            <li>⏰ 24/7 Emergency Service</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Our Services</h4>
+          <ul>
+            <li>Drain Cleaning</li>
+            <li>Leak Repair</li>
+            <li>Water Heaters</li>
+            <li>Toilet Repair</li>
+            <li>Sewer Lines</li>
+            <li>Remodeling</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 AquaFlow Plumbing. All rights reserved.</p>
+        <p>Licensed & Insured | Background-Checked Technicians</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta">
+    <a href="tel:5125550123">📞 Call Now: (512) 555-0123</a>
+  </div>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
