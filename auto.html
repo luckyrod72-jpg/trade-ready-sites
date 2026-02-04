@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{BUSINESS_NAME} - Trusted Auto Repair in {CITY}, {STATE}</title>
+  <meta name="description" content="Professional auto repair services in {CITY}, {STATE}. ASE certified mechanics, transparent pricing, and 24-month warranty. Call {PHONE} for a free estimate.">
+  <meta name="keywords" content="auto repair {CITY}, mechanic {CITY}, brake service, oil change, car repair near me">
+  <meta property="og:title" content="{BUSINESS_NAME} - Trusted Auto Repair">
+  <meta property="og:description" content="Professional auto repair in {CITY}. ASE certified, transparent pricing, 24-month warranty.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://example.com">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "{BUSINESS_NAME}",
+    "image": "",
+    "telephone": "{PHONE}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{ADDRESS}",
+      "addressLocality": "{CITY}",
+      "addressRegion": "{STATE}",
+      "postalCode": "{ZIP}",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "",
+      "longitude": ""
+    },
+    "url": "https://example.com",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "16:00"
+      }
+    ],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "247"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Auto Repair Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brake Service"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Oil Change"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tire Services"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Engine Diagnostics"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AC Repair"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transmission Service"}}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --primary: 222 47% 20%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 220 14% 96%;
+      --secondary-foreground: 222 47% 20%;
+      --background: 0 0% 100%;
+      --foreground: 222 47% 15%;
+      --muted: 220 14% 96%;
+      --muted-foreground: 220 9% 46%;
+      --accent: 38 92% 50%;
+      --accent-foreground: 222 47% 15%;
+      --card: 0 0% 100%;
+      --card-foreground: 222 47% 15%;
+      --border: 220 13% 91%;
+      --trust-green: 152 69% 31%;
+      --trust-green-foreground: 0 0% 100%;
+      --radius: 0.75rem;
+    }
+
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: hsl(var(--background));
+      color: hsl(var(--foreground));
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* Utilities */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section { padding: 5rem 0; }
+    .section-alt { background: hsl(var(--muted)); }
+
+    .text-center { text-align: center; }
+    .text-muted { color: hsl(var(--muted-foreground)); }
+    .text-primary { color: hsl(var(--primary)); }
+    .text-accent { color: hsl(var(--accent)); }
+
+    .font-bold { font-weight: 700; }
+    .font-extrabold { font-weight: 800; }
+
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .gap-2 { gap: 0.5rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-12 { margin-bottom: 3rem; }
+
+    .rounded { border-radius: var(--radius); }
+    .rounded-full { border-radius: 9999px; }
+    .rounded-xl { border-radius: 1rem; }
+    .rounded-2xl { border-radius: 1.5rem; }
+
+    .shadow { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+    .shadow-lg { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      font-weight: 700;
+      border-radius: var(--radius);
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+      box-shadow: 0 4px 20px hsl(var(--accent) / 0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px hsl(var(--accent) / 0.5);
+    }
+
+    .btn-secondary {
+      background: hsl(var(--primary-foreground));
+      color: hsl(var(--primary));
+      border: 2px solid hsl(var(--primary-foreground) / 0.2);
+    }
+    .btn-secondary:hover { background: hsl(var(--primary-foreground) / 0.9); }
+
+    .btn-outline {
+      background: transparent;
+      color: hsl(var(--primary));
+      border: 2px solid hsl(var(--border));
+    }
+    .btn-outline:hover { border-color: hsl(var(--primary)); }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: hsl(var(--trust-green) / 0.1);
+      color: hsl(var(--trust-green));
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    /* Cards */
+    .card {
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .card:hover {
+      border-color: hsl(var(--primary) / 0.2);
+      box-shadow: 0 10px 40px hsl(var(--primary) / 0.08);
+      transform: translateY(-4px);
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: hsl(var(--card));
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .header-top {
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+    }
+
+    .nav {
+      padding: 1rem 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: hsl(var(--primary)); }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: hsl(var(--primary));
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-top: 1px solid hsl(var(--border));
+    }
+    .mobile-nav.active { display: flex; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(222 47% 28%) 100%);
+      color: hsl(var(--primary-foreground));
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right, hsl(var(--primary)), transparent);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid hsl(var(--primary-foreground) / 0.2);
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+    .hero-stat-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    /* Services */
+    .service-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: hsl(var(--primary) / 0.1);
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+    }
+    .service-icon svg { 
+      width: 1.75rem; 
+      height: 1.75rem; 
+      color: hsl(var(--primary)); 
+    }
+    .card:hover .service-icon {
+      background: hsl(var(--primary));
+    }
+    .card:hover .service-icon svg {
+      color: hsl(var(--primary-foreground));
+    }
+
+    .service-price {
+      color: hsl(var(--accent));
+      font-weight: 700;
+      margin-top: auto;
+    }
+
+    /* How It Works */
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      border-radius: 9999px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 1rem;
+    }
+
+    .step-connector {
+      position: absolute;
+      top: 2rem;
+      left: calc(50% + 3rem);
+      width: calc(100% - 6rem);
+      height: 2px;
+      background: hsl(var(--border));
+    }
+
+    /* Trust Signals */
+    .trust-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+    }
+
+    .trust-icon {
+      flex-shrink: 0;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: hsl(var(--trust-green) / 0.1);
+      border-radius: 0.5rem;
+    }
+    .trust-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: hsl(var(--trust-green));
+    }
+
+    .cert-logos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 1px solid hsl(var(--border));
+    }
+
+    .cert-logo {
+      padding: 0.75rem 1.5rem;
+      background: hsl(var(--muted));
+      border-radius: 0.5rem;
+      font-weight: 700;
+      color: hsl(var(--muted-foreground));
+    }
+
+    /* Reviews */
+    .review-card {
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .review-stars {
+      color: hsl(var(--accent));
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .review-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: hsl(var(--foreground));
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .review-avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .review-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: hsl(var(--accent) / 0.1);
+      color: hsl(var(--accent));
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    /* Specials */
+    .special-card {
+      border: 2px dashed hsl(var(--accent) / 0.3);
+      border-radius: 1rem;
+      overflow: hidden;
+      background: hsl(var(--card));
+      transition: border-color 0.3s;
+    }
+    .special-card:hover { border-color: hsl(var(--accent)); }
+
+    .special-header {
+      background: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .special-discount {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .special-body { padding: 1.5rem; }
+
+    .special-code {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem;
+      background: hsl(var(--muted));
+      border-radius: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .special-code code {
+      font-weight: 700;
+      color: hsl(var(--primary));
+    }
+
+    /* FAQ */
+    .faq-item {
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: hsl(var(--card));
+      border: none;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: hsl(var(--muted)); }
+
+    .faq-answer {
+      padding: 0 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s;
+      background: hsl(var(--card));
+    }
+    .faq-answer.open {
+      padding: 1rem 1.5rem;
+      max-height: 500px;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s;
+    }
+    .faq-question.open .faq-icon { transform: rotate(180deg); }
+
+    /* Location */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 400px;
+      background: hsl(var(--muted));
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: hsl(var(--muted-foreground));
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: hsl(var(--primary) / 0.1);
+      border-radius: 0.5rem;
+      flex-shrink: 0;
+    }
+    .contact-icon svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: hsl(var(--primary));
+    }
+
+    /* Footer */
+    .footer {
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer a { opacity: 0.8; transition: opacity 0.2s; }
+    .footer a:hover { opacity: 1; }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid hsl(var(--primary-foreground) / 0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      opacity: 0.6;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-link {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: hsl(var(--primary-foreground) / 0.1);
+      border-radius: 9999px;
+      transition: background 0.2s;
+    }
+    .social-link:hover { background: hsl(var(--primary-foreground) / 0.2); }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: hsl(var(--primary));
+      z-index: 40;
+      display: none;
+    }
+
+    .sticky-cta-inner {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .sticky-cta .btn {
+      flex: 1;
+      padding: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .location-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .header-top { display: none; }
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      
+      .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      
+      .hero { padding: 3rem 0; }
+      .hero h1 { font-size: 2rem; }
+      .hero-stats { flex-wrap: wrap; gap: 1rem; }
+      
+      .step-connector { display: none; }
+      
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      
+      .sticky-cta { display: block; }
+      body { padding-bottom: 5rem; }
+    }
+
+    /* Icons (inline SVGs) */
+    .icon { width: 1.25rem; height: 1.25rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container flex justify-between items-center">
+        <div class="flex gap-6 items-center">
+          <span class="flex gap-2 items-center">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Mon-Fri: 8am-6pm | Sat: 8am-4pm
+          </span>
+          <span class="flex gap-2 items-center">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {CITY}, {STATE}
+          </span>
+        </div>
+        <a href="tel:{PHONE}" class="flex gap-2 items-center font-bold">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          {PHONE}
+        </a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="container flex justify-between items-center">
+        <a href="#" class="logo">{BUSINESS_NAME}</a>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="tel:{PHONE}" class="btn btn-primary">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now
+          </a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:1.5rem;height:1.5rem"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+      <div class="container">
+        <div class="mobile-nav" id="mobileNav">
+          <a href="#services">Services</a>
+          <a href="#specials">Specials</a>
+          <a href="#faq">FAQ</a>
+          <a href="#location">Location</a>
+          <a href="tel:{PHONE}" class="btn btn-primary">Call Now</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge mb-4">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          ASE Certified Technicians
+        </span>
+        <h1>Honest Auto Repair You Can Trust</h1>
+        <p style="font-size:1.25rem;opacity:0.9;margin-bottom:2rem">
+          Fair prices. No surprises. Your car fixed right the first time—guaranteed.
+        </p>
+        <div class="flex gap-4" style="flex-wrap:wrap">
+          <a href="tel:{PHONE}" class="btn btn-primary" style="font-size:1.125rem;padding:1rem 2rem">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now: {PHONE}
+          </a>
+          <a href="#quote" class="btn btn-secondary" style="font-size:1.125rem;padding:1rem 2rem">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Get a Free Quote
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">15+</div>
+            <div class="hero-stat-label">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">10K+</div>
+            <div class="hero-stat-label">Cars Repaired</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">4.9★</div>
+            <div class="hero-stat-label">Google Rating</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">24mo</div>
+            <div class="hero-stat-label">Warranty</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <span class="badge mb-4">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          Full-Service Shop
+        </span>
+        <h2 style="font-size:2.5rem;margin-bottom:1rem">What We Fix</h2>
+        <p class="text-muted" style="max-width:600px;margin:0 auto;font-size:1.125rem">
+          From routine maintenance to major repairs, our certified technicians handle it all with honest pricing and no surprises.
+        </p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card flex flex-col">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="font-bold mb-2">Brake Service</h3>
+          <p class="text-muted mb-4" style="font-size:0.875rem">Stop safely every time. We check pads, rotors, and fluid to keep your family protected on the road.</p>
+          <span class="service-price">From $99</span>
+        </div>
+        <div class="card flex flex-col">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3 class="font-bold mb-2">Oil Change</h3>
+          <p class="text-muted mb-4" style="font-size:0.875rem">Keep your engine running smooth. Quick, clean oil changes with quality filters included.</p>
+          <span class="service-price">From $39</span>
+        </div>
+        <div class="card flex flex-col">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+          </div>
+          <h3 class="font-bold mb-2">Tire Services</h3>
+          <p class="text-muted mb-4" style="font-size:0.875rem">Rotation, balancing, and new tires. Better grip, better gas mileage, better safety.</p>
+          <span class="service-price">From $25</span>
+        </div>
+        <div class="card flex flex-col">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3 class="font-bold mb-2">Diagnostics</h3>
+          <p class="text-muted mb-4" style="font-size:0.875rem">Check engine light on? We find out exactly what's wrong before recommending any repairs.</p>
+          <span class="service-price">From $49</span>
+        </div>
+        <div class="card flex flex-col">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M2 12h2a8 8 0 0 1 16 0h2"/><path d="M5 12a7 7 0 0 1 14 0"/><path d="m8 12 1 8h6l1-8"/></svg>
+          </div>
+          <h3 class="font-bold mb-2">AC & Heating</h3>
+          <p class="text-muted mb-4" style="font-size:0.875rem">Stay comfortable year-round. We fix leaks, recharge systems, and replace compressors.</p>
+          <span class="service-price">From $89</span>
+        </div>
+        <div class="card flex flex-col">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 class="font-bold mb-2">Transmission</h3>
+          <p class="text-muted mb-4" style="font-size:0.875rem">Smooth shifting matters. From fluid changes to full rebuilds, we handle it all.</p>
+          <span class="service-price">Free inspection</span>
+        </div>
+        <div class="card flex flex-col">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="font-bold mb-2">General Repairs</h3>
+          <p class="text-muted mb-4" style="font-size:0.875rem">From belts to batteries, suspension to steering—we fix what other shops can't figure out.</p>
+          <span class="service-price">Free estimate</span>
+        </div>
+        <div class="card flex flex-col">
+          <div class="service-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+          </div>
+          <h3 class="font-bold mb-2">Pre-Purchase Inspection</h3>
+          <p class="text-muted mb-4" style="font-size:0.875rem">Buying a used car? We'll check it top to bottom so you know exactly what you're getting.</p>
+          <span class="service-price">From $79</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.5rem;margin-bottom:1rem">How It Works</h2>
+        <p class="text-muted" style="max-width:600px;margin:0 auto;font-size:1.125rem">
+          Simple, transparent process. No surprises, no pressure.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        <div class="step">
+          <div class="step-connector"></div>
+          <div class="step-number">1</div>
+          <h3 class="font-bold mb-2" style="font-size:1.25rem">We Diagnose</h3>
+          <p class="text-muted">Bring your car in or call us. We'll run a complete inspection and tell you exactly what's going on—no guesswork.</p>
+        </div>
+        <div class="step">
+          <div class="step-connector"></div>
+          <div class="step-number">2</div>
+          <h3 class="font-bold mb-2" style="font-size:1.25rem">You Approve</h3>
+          <p class="text-muted">We'll give you a written estimate with all costs upfront. You decide what gets done—no pressure, no hidden fees.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 class="font-bold mb-2" style="font-size:1.25rem">We Repair</h3>
+          <p class="text-muted">Our certified techs get to work. Most jobs done same-day. You'll drive away with a 24-month warranty and peace of mind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.5rem;margin-bottom:1rem">Why {CITY} Trusts Us</h2>
+        <p class="text-muted" style="max-width:600px;margin:0 auto;font-size:1.125rem">
+          We've built our reputation on doing the job right the first time—every time.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">ASE Certified Technicians</h4>
+            <p class="text-muted" style="font-size:0.875rem">Our mechanics are tested and certified by the National Institute for Automotive Service Excellence.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">AAA Approved Facility</h4>
+            <p class="text-muted" style="font-size:0.875rem">We meet the highest standards for customer service, technician training, and quality repairs.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">Transparent Pricing</h4>
+            <p class="text-muted" style="font-size:0.875rem">Written estimates before any work begins. The price we quote is the price you pay—period.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">24-Month Warranty</h4>
+            <p class="text-muted" style="font-size:0.875rem">Parts and labor guaranteed. If something goes wrong, we make it right at no extra cost.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">Same-Day Service</h4>
+            <p class="text-muted" style="font-size:0.875rem">Most repairs completed the same day. We know you need your car back as soon as possible.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">Family Owned Since 2009</h4>
+            <p class="text-muted" style="font-size:0.875rem">We're your neighbors. Our reputation matters because we live and work in this community.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cert-logos">
+        <span class="cert-logo">ASE</span>
+        <span class="cert-logo">AAA</span>
+        <span class="cert-logo">BBB A+</span>
+        <span class="cert-logo">NAPA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.5rem;margin-bottom:1rem">What Our Customers Say</h2>
+        <p class="text-muted" style="font-size:1.125rem">4.9 stars from 247+ Google reviews</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"They told me exactly what was wrong and didn't try to upsell me on things I didn't need. Refreshing to find an honest mechanic!"</p>
+          <div class="review-author">
+            <div class="review-avatar">SM</div>
+            <div>
+              <div class="font-bold">Sarah M.</div>
+              <div class="text-muted" style="font-size:0.875rem">Honda Accord owner</div>
+            </div>
+          </div>
+          <span class="review-tag">Honest Service</span>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Got my car back the same day. They even cleaned it before returning it. Prices were exactly what they quoted—no surprises."</p>
+          <div class="review-author">
+            <div class="review-avatar">MR</div>
+            <div>
+              <div class="font-bold">Mike R.</div>
+              <div class="text-muted" style="font-size:0.875rem">Ford F-150 owner</div>
+            </div>
+          </div>
+          <span class="review-tag">Fast & Fair</span>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Been coming here for 5 years. They've saved me thousands by catching problems early and always explaining what needs to be done."</p>
+          <div class="review-author">
+            <div class="review-avatar">JL</div>
+            <div>
+              <div class="font-bold">Jennifer L.</div>
+              <div class="text-muted" style="font-size:0.875rem">Toyota Camry owner</div>
+            </div>
+          </div>
+          <span class="review-tag">Trusted Expert</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specials -->
+  <section id="specials" class="section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <span class="badge mb-4" style="background:hsl(var(--accent)/0.1);color:hsl(var(--accent))">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          Limited Time Offers
+        </span>
+        <h2 style="font-size:2.5rem;margin-bottom:1rem">Current Specials & Coupons</h2>
+        <p class="text-muted" style="max-width:600px;margin:0 auto;font-size:1.125rem">
+          Save on the services you need. Print or show on your phone.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        <div class="special-card">
+          <div class="special-header">
+            <svg style="width:2rem;height:2rem;margin-bottom:0.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+            <div class="special-discount">15% OFF</div>
+          </div>
+          <div class="special-body">
+            <h3 class="font-bold mb-2">First-Time Customer Special</h3>
+            <p class="text-muted mb-4">Any service over $100. New customers only.</p>
+            <div class="special-code">
+              <span class="text-muted" style="font-size:0.875rem">Use code:</span>
+              <code>WELCOME15</code>
+            </div>
+            <div class="flex gap-2 items-center text-muted" style="font-size:0.875rem">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Expires end of month
+            </div>
+          </div>
+        </div>
+        <div class="special-card">
+          <div class="special-header">
+            <svg style="width:2rem;height:2rem;margin-bottom:0.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+            <div class="special-discount">$29.99</div>
+          </div>
+          <div class="special-body">
+            <h3 class="font-bold mb-2">Oil Change Deal</h3>
+            <p class="text-muted mb-4">Conventional oil change with filter. Up to 5 quarts.</p>
+            <div class="special-code">
+              <span class="text-muted" style="font-size:0.875rem">Use code:</span>
+              <code>OIL2024</code>
+            </div>
+            <div class="flex gap-2 items-center text-muted" style="font-size:0.875rem">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              While supplies last
+            </div>
+          </div>
+        </div>
+        <div class="special-card">
+          <div class="special-header">
+            <svg style="width:2rem;height:2rem;margin-bottom:0.5rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            <div class="special-discount">$50 OFF</div>
+          </div>
+          <div class="special-body">
+            <h3 class="font-bold mb-2">Brake Service Bundle</h3>
+            <p class="text-muted mb-4">Front or rear brake pad replacement with rotor resurface.</p>
+            <div class="special-code">
+              <span class="text-muted" style="font-size:0.875rem">Use code:</span>
+              <code>BRAKES50</code>
+            </div>
+            <div class="flex gap-2 items-center text-muted" style="font-size:0.875rem">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Limited time offer
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:2rem;padding:1.5rem;background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:var(--radius)">
+        <p class="text-muted mb-2">Can't find what you need? Call us for a custom quote.</p>
+        <a href="tel:{PHONE}" class="text-primary font-bold" style="font-size:1.25rem">{PHONE}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section-alt">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.5rem;margin-bottom:1rem">Frequently Asked Questions</h2>
+        <p class="text-muted" style="max-width:600px;margin:0 auto;font-size:1.125rem">
+          Quick answers to common questions. Still have questions? Just call us.
+        </p>
+      </div>
+      <div style="max-width:800px;margin:0 auto">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long will my repair take?
+            <svg class="faq-icon icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Most services like oil changes, brake pads, and diagnostics are completed same-day (usually 2-4 hours). Larger repairs may take 1-2 days. We'll give you an accurate timeline upfront and call if anything changes.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you provide written estimates?
+            <svg class="faq-icon icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Absolutely. You'll receive a detailed written estimate before we start any work. We explain exactly what needs to be done and why. No work begins until you approve the cost.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What does your warranty cover?
+            <svg class="faq-icon icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Our 24-month/24,000-mile warranty covers both parts and labor on all repairs we perform. If something we fixed fails within that period, we'll make it right at no additional cost to you.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you offer towing services?
+            <svg class="faq-icon icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Yes, we can arrange towing to our shop. We work with trusted local towing companies and can often get discounted rates. Call us and we'll help coordinate getting your vehicle here safely.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you have loaner cars available?
+            <svg class="faq-icon icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            We have a limited number of loaner vehicles available for customers with major repairs. Please call ahead to check availability. We also offer a complimentary local shuttle service during business hours.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What payment methods do you accept?
+            <svg class="faq-icon icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            We accept cash, all major credit cards (Visa, Mastercard, American Express, Discover), and debit cards. We also offer financing options for larger repairs—ask our service advisors for details.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 style="font-size:2.5rem;margin-bottom:1rem">Visit Our Shop</h2>
+        <p class="text-muted" style="max-width:600px;margin:0 auto;font-size:1.125rem">
+          Conveniently located in {CITY}. Stop by or call ahead.
+        </p>
+      </div>
+      <div class="location-grid">
+        <div class="map-placeholder">
+          <!-- Replace with Google Maps embed -->
+          <div class="text-center">
+            <svg style="width:4rem;height:4rem;margin-bottom:1rem;opacity:0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>Google Maps Embed</p>
+            <p style="font-size:0.875rem;margin-top:0.5rem">Replace with your Google Maps embed code</p>
+          </div>
+        </div>
+        <div class="contact-info">
+          <h3 class="font-bold" style="font-size:1.5rem;margin-bottom:1.5rem">{BUSINESS_NAME}</h3>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="font-bold mb-1">Address</div>
+              <p class="text-muted">{ADDRESS}<br>{CITY}, {STATE} {ZIP}</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="font-bold mb-1">Phone</div>
+              <a href="tel:{PHONE}" class="text-primary font-bold" style="font-size:1.25rem">{PHONE}</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="font-bold mb-1">Hours</div>
+              <p class="text-muted">
+                Mon-Fri: 8:00 AM - 6:00 PM<br>
+                Saturday: 8:00 AM - 4:00 PM<br>
+                Sunday: Closed
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4" style="margin-top:1.5rem;flex-wrap:wrap">
+            <a href="tel:{PHONE}" class="btn btn-primary">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Now
+            </a>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="font-bold" style="font-size:1.5rem;margin-bottom:1rem">{BUSINESS_NAME}</h3>
+          <p style="opacity:0.8;max-width:400px;margin-bottom:1.5rem">
+            Your trusted neighborhood auto repair shop. Honest service, fair prices, and quality work since 2009.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold" style="margin-bottom:1rem">Quick Links</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold" style="margin-bottom:1rem">Contact Us</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem">
+            <li class="flex gap-2 items-center">
+              <svg class="icon text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:{PHONE}">{PHONE}</a>
+            </li>
+            <li class="flex gap-2" style="align-items:flex-start">
+              <svg class="icon text-accent" style="margin-top:0.25rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>{ADDRESS}<br>{CITY}, {STATE}</span>
+            </li>
+            <li class="flex gap-2 items-center">
+              <svg class="icon text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:service@example.com">service@example.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 {BUSINESS_NAME}. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta">
+    <div class="sticky-cta-inner container">
+      <a href="tel:{PHONE}" class="btn btn-primary">
+        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now
+      </a>
+      <a href="#quote" class="btn" style="background:hsl(var(--primary-foreground)/0.1);border:1px solid hsl(var(--primary-foreground)/0.2)">
+        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Get Quote
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('active');
+    }
+
+    // FAQ accordion
+    function toggleFaq(button) {
+      const answer = button.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+      
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+      
+      // Open clicked if it wasn't open
+      if (!isOpen) {
+        answer.classList.add('open');
+        button.classList.add('open');
+      }
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Close mobile menu if open
+          document.getElementById('mobileNav').classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
