@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://*.tradereadysites.com/*"
+  to = "https://:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://*.tradereadysites.com"
+  to = "/"
+  status = 200
+  force = true

@@ -1,0 +1,28 @@
+async function getContractor(slug) {
+  const res = await fetch(`http://localhost:3000/api/contractor?slug=${slug}`, {
+    cache: "no-store",
+  });
+  if (!res.ok) return null;
+  return res.json();
+}
+
+export default async function ContractorPage({ params }) {
+  const contractor = await getContractor(params.slug);
+
+  if (!contractor) {
+    return (
+      <div style={{ padding: 24, fontFamily: "system-ui" }}>
+        <h1>Not found</h1>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ padding: 24, fontFamily: "system-ui" }}>
+      <h1>{contractor.business_name}</h1>
+      <p><b>Trade:</b> {contractor.trade}</p>
+      <p><b>Phone:</b> {contractor.phone}</p>
+      <p><b>City:</b> {contractor.city}</p>
+    </div>
+  );
+}
