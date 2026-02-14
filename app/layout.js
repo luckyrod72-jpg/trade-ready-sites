@@ -1,4 +1,3 @@
-import './globals.css'; 
 export const metadata = {
   title: 'Trade Ready Sites',
   description: 'Professional contractor websites',
